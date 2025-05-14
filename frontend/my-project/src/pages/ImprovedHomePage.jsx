@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Image1_Cap1 from '../assets/LOS50_S02_EP001_TLMD_800x450_2380558915701.jpg';
+import Image2_Cap1 from '../assets/36687836360-1080pnbcstations.jpg';
 
 const ImprovedHomePage = () => {
   // Estados para manejar los datos y filtros
@@ -18,7 +20,7 @@ const ImprovedHomePage = () => {
           title: 'Los 50 - Episodio 1', 
           description: 'El comienzo de nuestra segunda temporada con invitados especiales.',
           category: 'episodio',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image1_Cap1,
           date: '2025-04-28',
           featured: true
         },
@@ -45,7 +47,7 @@ const ImprovedHomePage = () => {
           title: 'Los 50 - Episodio 2', 
           description: 'Las tensiones comienzan a surgir entre los participantes.',
           category: 'episodio',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image2_Cap1,
           date: '2025-05-01',
           featured: true
         },
