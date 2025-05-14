@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Image1_cap1 from '../assets/LOS50_S02_EP001_TLMD_800x450_2380558915701.jpg';
 
 const ImprovedHomePage = () => {
-  // Estados para manejar los datos y filtros
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -10,7 +10,7 @@ const ImprovedHomePage = () => {
   
   // Efecto para cargar los datos
   useEffect(() => {
-    // Simulando carga de datos (después conectarás con tu API real)
+    // Simulando carga de datos
     setTimeout(() => {
       setItems([
         { 
@@ -18,8 +18,7 @@ const ImprovedHomePage = () => {
           title: 'Los 50 - Episodio 1', 
           description: 'El comienzo de nuestra segunda temporada con invitados especiales.',
           category: 'episodio',
-          image: 'https://via.placeholder.com/400x250',
-          date: '2025-04-28',
+          image: Image1_cap1,
           featured: true
         },
         { 
@@ -27,7 +26,7 @@ const ImprovedHomePage = () => {
           title: 'Entrevista exclusiva', 
           description: 'Conversamos con uno de los personajes más importantes de la temporada.',
           category: 'entrevista',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image1_cap1,
           date: '2025-04-25',
           featured: false
         },
@@ -36,7 +35,7 @@ const ImprovedHomePage = () => {
           title: 'Detrás de cámaras', 
           description: 'Te mostramos cómo se graba cada escena de Los 50.',
           category: 'exclusivo',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image1_cap1,
           date: '2025-04-20',
           featured: false
         },
@@ -45,7 +44,7 @@ const ImprovedHomePage = () => {
           title: 'Los 50 - Episodio 2', 
           description: 'Las tensiones comienzan a surgir entre los participantes.',
           category: 'episodio',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image1_cap1,
           date: '2025-05-01',
           featured: true
         },
@@ -54,7 +53,7 @@ const ImprovedHomePage = () => {
           title: 'Perfiles: Participante destacado', 
           description: 'Conoce la historia de uno de los participantes más populares.',
           category: 'perfil',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image1_cap1,
           date: '2025-04-15',
           featured: false
         },
@@ -63,7 +62,7 @@ const ImprovedHomePage = () => {
           title: 'Los mejores momentos', 
           description: 'Recopilación de las escenas más impactantes hasta ahora.',
           category: 'exclusivo',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image1_cap1,
           date: '2025-04-10',
           featured: false
         },
