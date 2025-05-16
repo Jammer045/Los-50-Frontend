@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Image1_Cap1 from '../assets/LOS50_S02_EP001_TLMD_800x450_2380558915701.jpg';
 import Image2_Cap1 from '../assets/36687836360-1080pnbcstations.jpg';
+import Image3_Cap1 from '../assets/images.jpeg';
+import Image4_Cap1 from '../assets/30484871410-1080pnbcstations.jpg';
+import Image5_Cap1 from '../assets/37486439021-1080pnbcstations.jpg';
+import Image6_Cap1 from '../assets/images (1).jpeg';
 
 const ImprovedHomePage = () => {
   // Estados para manejar los datos y filtros
@@ -29,7 +33,7 @@ const ImprovedHomePage = () => {
           title: 'Entrevista exclusiva', 
           description: 'Conversamos con uno de los personajes más importantes de la temporada.',
           category: 'entrevista',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image3_Cap1,
           date: '2025-04-25',
           featured: false
         },
@@ -38,7 +42,7 @@ const ImprovedHomePage = () => {
           title: 'Detrás de cámaras', 
           description: 'Te mostramos cómo se graba cada escena de Los 50.',
           category: 'exclusivo',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image4_Cap1,
           date: '2025-04-20',
           featured: false
         },
@@ -56,7 +60,7 @@ const ImprovedHomePage = () => {
           title: 'Perfiles: Participante destacado', 
           description: 'Conoce la historia de uno de los participantes más populares.',
           category: 'perfil',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image6_Cap1,
           date: '2025-04-15',
           featured: false
         },
@@ -65,7 +69,7 @@ const ImprovedHomePage = () => {
           title: 'Los mejores momentos', 
           description: 'Recopilación de las escenas más impactantes hasta ahora.',
           category: 'exclusivo',
-          image: 'https://via.placeholder.com/400x250',
+          image: Image5_Cap1,
           date: '2025-04-10',
           featured: false
         },
