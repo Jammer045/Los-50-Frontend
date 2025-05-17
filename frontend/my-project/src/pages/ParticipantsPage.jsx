@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Participant_Rogelio from '../assets/Rogelio_Martinez.jpeg';
+import Participant_Miguel from '../assets/Miguel.jpeg';
+import Participan_Yarishna from '../assets/Yarishna.jpeg';
+import Participant_Nahomi from '../assets/Nahomi.jpeg';
+import Particpant_Roberto from '../assets/Roberto.jpeg';
+import Participant_ana from '../assets/ana.jpeg';
+import Participant_Francisco from '../assets/Francisco.jpeg';
+import Participant_Paola from '../assets/Paola.jpeg';
 
 const ParticipantsPage = () => {
   const [participants, setParticipants] = useState([]);
@@ -13,22 +21,22 @@ const ParticipantsPage = () => {
       setParticipants([
         {
           id: 1,
-          name: 'Carlos Martínez',
+          name: 'Rogelio Martínez',
           age: 32,
-          occupation: 'Deportista',
+          occupation: 'Cantante',
           team: 'norte',
-          bio: 'Ex futbolista profesional con una personalidad competitiva.',
-          image: 'https://via.placeholder.com/300x300',
+          bio: 'Cantante del regional Méxicano.',
+          image: Participant_Rogelio,
           status: 'active'
         },
         {
           id: 2,
-          name: 'Lucía Fernández',
+          name: 'Yarishna',
           age: 28,
           occupation: 'Modelo',
           team: 'sur',
           bio: 'Modelo internacional con experiencia en reality shows anteriores.',
-          image: 'https://via.placeholder.com/300x300',
+          image: Participan_Yarishna,
           status: 'active'
         },
         {
@@ -38,17 +46,17 @@ const ParticipantsPage = () => {
           occupation: 'Chef',
           team: 'norte',
           bio: 'Chef de renombre que ha trabajado en restaurantes de 5 estrellas.',
-          image: 'https://via.placeholder.com/300x300',
+          image: Participant_Miguel,
           status: 'active'
         },
         {
           id: 4,
-          name: 'Sofía Herrera',
+          name: 'Nahomi',
           age: 29,
-          occupation: 'Empresaria',
+          occupation: 'Estrella de reality shows',
           team: 'sur',
-          bio: 'Fundadora de una startup de tecnología y aventurera.',
-          image: 'https://via.placeholder.com/300x300',
+          bio: 'Estrella de reality shows con una personalidad carismática.',
+          image: Participant_Nahomi,
           status: 'eliminated'
         },
         {
@@ -58,7 +66,7 @@ const ParticipantsPage = () => {
           occupation: 'Actor',
           team: 'norte',
           bio: 'Actor de telenovelas con una personalidad carismática.',
-          image: 'https://via.placeholder.com/300x300',
+          image: Particpant_Roberto,
           status: 'active'
         },
         {
@@ -68,27 +76,27 @@ const ParticipantsPage = () => {
           occupation: 'Ingeniera',
           team: 'sur',
           bio: 'Ingeniera aeroespacial con una mente estratégica.',
-          image: 'https://via.placeholder.com/300x300',
+          image: Participant_ana,
           status: 'active'
         },
         {
           id: 7,
-          name: 'Javier López',
+          name: 'Francisco López',
           age: 31,
-          occupation: 'Médico',
+          occupation: 'Actor',
           team: 'norte',
-          bio: 'Médico de emergencias que decidió aventurarse en el reality.',
-          image: 'https://via.placeholder.com/300x300',
+          bio: 'Acator colombiano con una personalidad carismática.',
+          image: Participant_Francisco,
           status: 'eliminated'
         },
         {
           id: 8,
-          name: 'Paula Torres',
+          name: 'Paola Torres',
           age: 33,
           occupation: 'Cantante',
           team: 'sur',
           bio: 'Cantante con múltiples discos de platino y personalidad fuerte.',
-          image: 'https://via.placeholder.com/300x300',
+          image: Participant_Paola,
           status: 'active'
         },
       ]);
