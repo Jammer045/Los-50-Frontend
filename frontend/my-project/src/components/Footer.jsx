@@ -57,6 +57,9 @@ const Footer = () => {
                 <Link to="/participantes" className="text-gray-400 hover:text-white transition">Participantes</Link>
               </li>
               <li>
+                <Link to="/Votaciones" className="text-gray-400 hover:text-white transition">Votaciones</Link>
+              </li>
+              <li>
                 <Link to="/exclusivos" className="text-gray-400 hover:text-white transition">Contenido Exclusivo</Link>
               </li>
               <li>

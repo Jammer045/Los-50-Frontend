@@ -27,7 +27,8 @@ const ParticipantsPage = () => {
           team: 'norte',
           bio: 'Cantante del regional Méxicano.',
           image: Participant_Rogelio,
-          status: 'active'
+          status: 'active',
+          Vote: 0
         },
         {
           id: 2,
@@ -37,7 +38,8 @@ const ParticipantsPage = () => {
           team: 'sur',
           bio: 'Modelo internacional con experiencia en reality shows anteriores.',
           image: Participan_Yarishna,
-          status: 'active'
+          status: 'active',
+          Vote: 0
         },
         {
           id: 3,
@@ -47,7 +49,8 @@ const ParticipantsPage = () => {
           team: 'norte',
           bio: 'Chef de renombre que ha trabajado en restaurantes de 5 estrellas.',
           image: Participant_Miguel,
-          status: 'active'
+          status: 'active',
+          Vote: 0
         },
         {
           id: 4,
@@ -57,7 +60,8 @@ const ParticipantsPage = () => {
           team: 'sur',
           bio: 'Estrella de reality shows con una personalidad carismática.',
           image: Participant_Nahomi,
-          status: 'eliminated'
+          status: 'active',
+          Vote: 0
         },
         {
           id: 5,
@@ -67,7 +71,8 @@ const ParticipantsPage = () => {
           team: 'norte',
           bio: 'Actor de telenovelas con una personalidad carismática.',
           image: Particpant_Roberto,
-          status: 'active'
+          status: 'active',
+          Vote: 0
         },
         {
           id: 6,
@@ -77,7 +82,8 @@ const ParticipantsPage = () => {
           team: 'sur',
           bio: 'Ingeniera aeroespacial con una mente estratégica.',
           image: Participant_ana,
-          status: 'active'
+          status: 'active',
+          Vote: 0
         },
         {
           id: 7,
@@ -87,7 +93,8 @@ const ParticipantsPage = () => {
           team: 'norte',
           bio: 'Acator colombiano con una personalidad carismática.',
           image: Participant_Francisco,
-          status: 'eliminated'
+          status: 'eliminated',
+          Vote: 0
         },
         {
           id: 8,
@@ -97,7 +104,8 @@ const ParticipantsPage = () => {
           team: 'sur',
           bio: 'Cantante con múltiples discos de platino y personalidad fuerte.',
           image: Participant_Paola,
-          status: 'active'
+          status: 'active',
+          Vote: 0
         },
       ]);
       setLoading(false);
