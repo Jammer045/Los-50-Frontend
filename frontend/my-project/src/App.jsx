@@ -6,6 +6,7 @@ import ImprovedHomePage from './pages/ImprovedHomePage';
 import DetailPage from './pages/DetailPage';
 import ParticipantsPage from './pages/ParticipantsPage';
 import ParticipantDetail from './pages/ParticipantsDetails';
+import VotingPage from './pages/VotingPage';
 
 // Componente de página no encontrada
 const NotFound = () => (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/detail/:id" element={<DetailPage />} />
             <Route path="/participantes" element={<ParticipantsPage />} />
             <Route path="/participante/:id" element={<ParticipantDetail />} />
+            <Route path="/votaciones" element={<VotingPage />} />
             <Route path="/episodios" element={<NotFound />} />
             <Route path="/exclusivos" element={<NotFound />} />
             <Route path="/galeria" element={<NotFound />} />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Image1_cap1 from '../assets/LOS50_S02_EP001_TLMD_800x450_2380558915701.jpg';
 import Image2_cap1 from '../assets/36687836360-1080pnbcstations.jpg';
+import Image3_cap1 from '../assets/30484871410-1080pnbcstations.jpg';
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const DetailPage = () => {
           author: 'Juan Pérez'
         },
         { 
-          id: 2, 
+          id: 4, 
           title: 'Elemento 2', 
           description: 'Descripción completa del elemento 2. Esta es información más detallada que se mostrará en la página de detalles.',
           image: Image2_cap1,
@@ -35,7 +36,7 @@ const DetailPage = () => {
           id: 3, 
           title: 'Elemento 3', 
           description: 'Descripción completa del elemento 3. Esta es información más detallada que se mostrará en la página de detalles.',
-          image: 'https://via.placeholder.com/600x400',
+          image: Image3_cap1,
           date: '2025-04-20',
           author: 'Carlos López'
         },
