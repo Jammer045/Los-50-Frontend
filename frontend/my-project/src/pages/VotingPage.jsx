@@ -96,7 +96,7 @@ const VotingPage = () => {
           team: 'norte',
           bio: 'Actor colombiano con una personalidad carismática.',
           image: Participant_Francisco,
-          status: 'eliminated',
+          status: 'active',
           Vote: 0
         },
         {
@@ -144,6 +144,31 @@ const VotingPage = () => {
 
     setShowConfirmModal(false);
     setSelectedParticipant(null);
+  };
+
+  // NUEVA FUNCIÓN: Finalizar votación y eliminar participantes sin votos
+  const finalizeVoting = () => {
+    if (votesUsed === votesLimit) {
+      const participantsToEliminate = activeParticipants.filter(p => p.Vote === 0);
+      
+      setParticipants(prev => 
+        prev.map(participant => ({
+          ...participant,
+          status: participant.Vote === 0 && participant.status === 'active' 
+            ? 'eliminated' 
+            : participant.status
+        }))
+      );
+      
+      // Mostrar mensaje de confirmación
+      const eliminatedCount = participantsToEliminate.length;
+      if (eliminatedCount > 0) {
+        const eliminatedNames = participantsToEliminate.map(p => p.name).join(', ');
+        alert(`Votación finalizada. ${eliminatedCount} participante(s) eliminado(s): ${eliminatedNames}`);
+      } else {
+        alert('Votación finalizada. Todos los participantes recibieron al menos un voto.');
+      }
+    }
   };
 
   const resetVoting = () => {
@@ -213,7 +238,7 @@ const VotingPage = () => {
             </div>
           </div>
           
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <button
               onClick={undoLastVote}
               disabled={votingHistory.length === 0}
@@ -221,6 +246,17 @@ const VotingPage = () => {
             >
               Deshacer último voto
             </button>
+            
+            {/* NUEVO BOTÓN: Finalizar votación */}
+            {votesUsed === votesLimit && (
+              <button
+                onClick={finalizeVoting}
+                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold"
+              >
+                Finalizar votación y eliminar
+              </button>
+            )}
+            
             <button
               onClick={resetVoting}
               className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
@@ -239,6 +275,15 @@ const VotingPage = () => {
             ></div>
           </div>
         </div>
+
+        {/* NUEVO: Indicador de votación completa */}
+        {votesUsed === votesLimit && (
+          <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+            <p className="text-green-800 text-sm font-medium">
+              ✅ Has usado todos tus votos. Puedes finalizar la votación para eliminar participantes sin votos.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Historial de votos */}
@@ -283,6 +328,15 @@ const VotingPage = () => {
                 <div className="absolute top-3 left-3">
                   <div className="bg-green-600 text-white px-2 py-1 rounded-full text-sm font-bold">
                     {participant.Vote} {participant.Vote === 1 ? 'voto' : 'votos'}
+                  </div>
+                </div>
+              )}
+
+              {/* NUEVO: Indicador de riesgo de eliminación */}
+              {votesUsed === votesLimit && participant.Vote === 0 && (
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold text-center">
+                    ⚠️ SERÁ ELIMINADO
                   </div>
                 </div>
               )}
