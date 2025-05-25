@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Image1_cap1 from '../assets/LOS50_S02_EP001_TLMD_800x450_2380558915701.jpg';
+import BacgroundImage1 from '../assets/background1.png';
 
 const ImprovedHomePage = () => {
   const [items, setItems] = useState([]);
@@ -73,8 +74,7 @@ const ImprovedHomePage = () => {
 
   // Filtrar los elementos según la búsqueda y categoría
   const filteredItems = items.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          item.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = item.title.toLowerCase().startsWith(searchTerm.toLowerCase());
     const matchesCategory = categoryFilter === 'all' || item.category === categoryFilter;
     
     return matchesSearch && matchesCategory;
@@ -92,7 +92,9 @@ const ImprovedHomePage = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-6">
+    <div 
+  className="max-w-6xl mx-auto px-4 py-6 bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${BacgroundImage1})` }}>
       {/* Banner destacado */}
       {featuredItems.length > 0 && (
         <div className="mb-10">
