@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Image1_cap1 from '../assets/LOS50_S02_EP001_TLMD_800x450_2380558915701.jpg';
-import BacgroundImage1 from '../assets/background1.png';
+import BackgroundImage1 from '../assets/background1.png';
 
 const ImprovedHomePage = () => {
   const [items, setItems] = useState([]);
@@ -94,20 +94,21 @@ const ImprovedHomePage = () => {
   return (
     <div 
   className="max-w-6xl mx-auto px-4 py-6 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: `url(${BacgroundImage1})` }}>
+  style={{ backgroundImage: `url(${BackgroundImage1})` }}
+>
       {/* Banner destacado */}
       {featuredItems.length > 0 && (
         <div className="mb-10">
           <h2 className="text-2xl font-bold mb-4">Destacados</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {featuredItems.map((item) => (
-              <Link to={`/detail/${item.id}`} key={`featured-${item.id}`}>
+              <Link to={item.id === 5 ? '/participantes' : `/detail/${item.id}`}>
                 <div className="relative h-64 rounded-lg overflow-hidden group">
                   <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+    src={item.image} 
+    alt={item.title} 
+    className="w-full h-48 object-cover"
+  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                     <span className="inline-block px-2 py-1 text-xs font-semibold bg-blue-600 rounded mb-2">
@@ -189,12 +190,14 @@ const ImprovedHomePage = () => {
                 </div>
                 <h2 className="text-xl font-bold mb-2">{item.title}</h2>
                 <p className="text-gray-600 mb-4">{item.description}</p>
-                <Link 
-                  to={`/detail/${item.id}`}
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-                >
-                  Ver detalles
-                </Link>
+                <Link
+  to={item.id === 5 ? '/participantes' : `/detail/${item.id}`}
+  
+  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+>
+  Ver detalles
+</Link>
+
               </div>
             </div>
           ))}
